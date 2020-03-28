@@ -1,5 +1,5 @@
-# Dockerfile for building Debian packages using current stable repo.
-FROM debian:buster
+# Dockerfile for building Ubuntu packages for the bionic release.
+FROM ubuntu:bionic
 MAINTAINER Scott Parlane <4508875+sparlane@users.noreply.github.com>
 
 COPY sources-list /etc/apt/sources.list
