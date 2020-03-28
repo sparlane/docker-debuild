@@ -1,6 +1,6 @@
 # Dockerfile for building Debian packages using current stable repo.
-FROM debian:stable
-MAINTAINER Ruslan Kabalin <r.kabalin@lancaster.ac.uk>
+FROM debian:buster
+MAINTAINER Scott Parlane <4508875+sparlane@users.noreply.github.com>
 
 COPY sources-list /etc/apt/sources.list
 RUN apt-get update && apt-get install -y --no-install-recommends \
