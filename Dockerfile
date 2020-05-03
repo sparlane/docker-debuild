@@ -1,7 +1,7 @@
 # Dockerfile for building Ubuntu packages for the bionic release.
 FROM ubuntu:focal
 
-RUN apt update && apt install -y ca-certificates curl gnupg
+RUN apt update && apt install -y ca-certificates curl gnupg apt-transport-https
 
 RUN curl https://apt.canterburyairpatrol.org/repository.key | apt-key add -
 
