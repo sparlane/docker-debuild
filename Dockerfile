@@ -1,6 +1,9 @@
 # Dockerfile for building Debian packages using current stable repo.
 FROM debian:stretch
-MAINTAINER Ruslan Kabalin <r.kabalin@lancaster.ac.uk>
+
+RUN apt update && apt install -y ca-certificates curl gnupg
+
+RUN curl https://apt.canterburyairpatrol.org/repository.key | apt-key add -
 
 COPY sources-list /etc/apt/sources.list
 RUN apt-get update && apt-get install -y --no-install-recommends \
