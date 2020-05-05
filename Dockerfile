@@ -8,7 +8,7 @@ RUN curl https://apt.canterburyairpatrol.org/repository.key | apt-key add -
 COPY setup-tz.sh /
 RUN /bin/bash /setup-tz.sh
 
-COPY sources-list /etc/apt/sources.list
+COPY sources-list /etc/apt/sources.list.d/extra-sources.list
 RUN apt-get update && apt-get install -y --no-install-recommends \
   devscripts \
   equivs \
